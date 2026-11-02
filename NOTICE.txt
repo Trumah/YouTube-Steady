@@ -1,0 +1,37 @@
+YouTube Steady 2.1.1 — local browser port of DePan
+Modified and assembled 2026-11-02. Distributed under GNU GPL version 2
+or, at your option, any later version. See LICENSE.txt.
+
+DePan / DePanEstimate
+  Copyright (c) 2004-2016 A.G. Balakhnin (Fizick).
+  8-16 bit and multithreaded maintenance by Ferenc Pinter.
+  https://github.com/pinterf/mvtools
+  Pinned source commit: b41dca46d97916c9e86c7be2b7fc434349df0fd4
+  The native baseline is DePan 2.15 + DePanEstimate 2.12.
+  Corresponding original source excerpts are in src/vendor/depan.
+  src/depan_core.cpp adapts the translation estimator and method=0 inertial
+  smoothing to sequential WebAssembly. It removes Avisynth/Windows plumbing,
+  interlacing, rotation/zoom estimation, future frames, and file I/O.
+  Differences: initialized prior trust; deterministic +.011 valid-zero marker;
+  a sign-preserving negative safety limit. No original DLL is bundled.
+
+FFTW 3.3.10, single precision, statically linked
+  Copyright (c) 2003, 2007-14 Matteo Frigo
+  Copyright (c) 2003, 2007-14 Massachusetts Institute of Technology
+  https://www.fftw.org/fftw-3.3.10.tar.gz
+  SHA256 56c932549852cddcfafdab3820b0200c7742675be92179e59e6215b340e26467
+  GNU GPL version 2 or later; original copyright is in FFTW-COPYRIGHT.txt.
+  Complete unmodified upstream source archive is supplied in the matching
+  YouTube-Steady-2.0.0-source.zip under src/vendor/fftw.
+
+Emscripten 6.0.13 generated runtime / toolchain
+  https://github.com/emscripten-core/emscripten
+  Emscripten is distributed under MIT / University of Illinois/NCSA terms.
+  The notices supplied by that release are in EMSCRIPTEN-LICENSE.txt.
+
+The matching source ZIP contains all project source, original algorithm
+excerpts, FFTW source, build scripts/instructions, deterministic test inputs
+and validation records. See README-build.txt for an offline FFTW build.
+No remote executable code, telemetry, Native Messaging host, native installer,
+extra decoder, or desktop shortcut is used by the extension.
+
