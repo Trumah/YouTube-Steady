@@ -1,18 +1,18 @@
 YouTube Steady public distribution
 
-The complete corresponding source is in YouTube-Steady-2.1.1-source.zip.
+The complete corresponding source is in YouTube-Steady-2.1.2-source.zip.
 Extract that archive for the extension source, build scripts, translations,
 native reference tests and public validation reports. The GPL license and
 third-party notices are included in both packages.
 
-YouTube Steady 2.1.1
+YouTube Steady 2.1.2
 
 Real-time, translation-only video stabilization inside the YouTube player.
 The DePan / FFTW WebAssembly core runs on your device. YouTube still controls
 audio, seeking, speed and fullscreen. No preliminary download or conversion.
 
 Install / share
-  The YouTube-Steady-2.1.1.zip archive contains the extension itself.
+  The YouTube-Steady-2.1.2.zip archive contains the extension itself.
   Extract it into one folder. In desktop Chrome, open Extensions > Manage
   extensions, enable Developer mode, choose Load unpacked, and select that
   folder. Keep the folder, including the .wasm file and _locales directory.
@@ -83,12 +83,13 @@ Privacy / source
   GNU GPL version 2 or later. See LICENSE.txt and NOTICE.txt.
 
 Optional one-time support and free publication
-  A public PayPal.Me profile can be configured by the project owner. Tips
-  are optional and use an amount chosen by the supporter; no subscription
-  or automatic renewal is created. Until a real receiver is provided, tip
-  links stay hidden. Payment fees and regional availability still apply.
+  The owner-approved public receiver is https://paypal.me/TrumanSun
+  (Sun Truman, @TrumanSun), verified on the public PayPal.Me profile.
+  Tips are optional and use an amount chosen by the supporter; no subscription
+  or automatic renewal is created. Payment fees and regional availability
+  still apply. No real payment was made as part of release verification.
   The public website remembers its language preference; the hosting provider
   may keep ordinary access logs. The extension adds no payment SDK or extra
   API permissions. See PUBLISHING.txt for setup and free GitHub distribution.
-  This is a preview release. Live publication and receiver checkout require
-  authenticated owner setup and are not implied by a local build or ZIP.
+  This is a preview release. Public profile/link checks do not verify account
+  eligibility, completion of a payment or withdrawal to a bank account.

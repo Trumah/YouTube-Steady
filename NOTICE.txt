@@ -1,4 +1,4 @@
-YouTube Steady 2.1.1 — local browser port of DePan
+YouTube Steady 2.1.2 — local browser port of DePan
 Modified and assembled 2026-11-02. Distributed under GNU GPL version 2
 or, at your option, any later version. See LICENSE.txt.
 
