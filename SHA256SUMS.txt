@@ -1,2 +1,2 @@
-657d2b8388b6fa93ee3ac3ee9edab5523781d4fc5e0ececa0ad46b5e1bf80db1  YouTube-Steady-2.1.2.zip
-55dca2eb73b1e2e1ac6825009f2916c7aa383a1535b23b28b12fc94b3779daf8  YouTube-Steady-2.1.2-source.zip
+79007c38f3733ee8efb30324b9965c47ddc08cf0ebf2e1c52cfb975c69e6a6c0  Video-Stabilizer-2.9.3.zip
+60f94f018708e74a1d36f7917470e6fe0447094b1d61acf779322bd1dbda1920  Video-Stabilizer-2.9.3-source.zip

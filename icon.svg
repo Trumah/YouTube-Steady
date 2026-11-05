@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="11" fill="#b5efd8"/><path d="M9 16v-5h6m10 0h6v5m0 9v5h-6m-10 0H9v-5" stroke="#122b30" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="m17 15 9 5-9 5z" fill="#122b30"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Original YouTube Steady mark: camera + video + paired stabilization arcs. -->
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="#43edbb"/>
+  <g stroke="#102f3b" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M22 40c-12 13-12 35 0 48"/>
+    <path d="M106 40c12 13 12 35 0 48"/>
+  </g>
+  <path d="M45 45l7-12h24l7 12h6a9 9 0 0 1 9 9v31a9 9 0 0 1-9 9H39a9 9 0 0 1-9-9V54a9 9 0 0 1 9-9z" fill="#102f3b"/>
+  <circle cx="64" cy="68" r="18" fill="#f8fffc"/>
+  <path d="M59 57l16 11-16 11z" fill="#102f3b"/>
+</svg>

@@ -1,5 +1,5 @@
-YouTube Steady 2.1.2 — local browser port of DePan
-Modified and assembled 2026-11-02. Distributed under GNU GPL version 2
+Video Stabilizer 2.9.3 — local browser port of DePan
+Modified and assembled 2026-11-05. Distributed under GNU GPL version 2
 or, at your option, any later version. See LICENSE.txt.
 
 DePan / DePanEstimate
@@ -13,7 +13,15 @@ DePan / DePanEstimate
   smoothing to sequential WebAssembly. It removes Avisynth/Windows plumbing,
   interlacing, rotation/zoom estimation, future frames, and file I/O.
   Differences: initialized prior trust; deterministic +.011 valid-zero marker;
-  a sign-preserving negative safety limit. No original DLL is bundled.
+  a sign-preserving negative safety limit. Version 2.2 adds independent region
+  references, source-relative footprints and confidence/consensus fusion.
+  Version 2.3 adds a central-ratio grid, per-cell FFT/search configuration and
+  unified single-region processing. New multi-region grids use spatial consensus
+  in place of the individual temporal confidence-drop veto.
+  Version 2.4 adds percentage sampling, cross-shaped selection, bounded
+  dynamic workspaces and resource estimates.
+  These additions are browser-port features, not original DePan modes.
+  No original DLL is bundled.
 
 FFTW 3.3.10, single precision, statically linked
   Copyright (c) 2003, 2007-14 Matteo Frigo
@@ -22,7 +30,7 @@ FFTW 3.3.10, single precision, statically linked
   SHA256 56c932549852cddcfafdab3820b0200c7742675be92179e59e6215b340e26467
   GNU GPL version 2 or later; original copyright is in FFTW-COPYRIGHT.txt.
   Complete unmodified upstream source archive is supplied in the matching
-  YouTube-Steady-2.0.0-source.zip under src/vendor/fftw.
+  Video-Stabilizer-2.9.3-source.zip under src/vendor/fftw.
 
 Emscripten 6.0.13 generated runtime / toolchain
   https://github.com/emscripten-core/emscripten
@@ -35,3 +43,38 @@ and validation records. See README-build.txt for an offline FFTW build.
 No remote executable code, telemetry, Native Messaging host, native installer,
 extra decoder, or desktop shortcut is used by the extension.
 
+
+2.5.1: content-script invalidation cleanup, inline player SVG and byte-based
+WebAssembly loading. Existing native calculations and saved defaults retained.
+
+2.5.1: shared source-relative R/S/C controls and a separate five-second SVG
+preview; legacy profiles retained until explicit adoption. Native core unchanged.
+
+2.5.1: native parameter sliders and a shared UI/overlay color palette;
+region status uses separate fills/dots. Settings and native core unchanged.
+
+2.5.2: source-relative compensation edge-band preview; search and native
+  stabilization remain unchanged.
+
+2.6.0: independent icon preferences and expanded inputs; API 6 uses an implicit
+  solve for stiff nonlinear limits while preserving normal native references.
+
+2.7.0: strength presets, original comparison, local undo and explicitly saved
+  personal defaults with recovery. Original custom storage is retained; native
+  core and numerical defaults are unchanged from 2.6.0.
+
+2.7.1: one common cutoff control with text strength guides; coupled preset
+  buttons removed, existing stored profiles and native core retained.
+
+2.7.2: logarithmic cutoff slider with reciprocal-period display; C in common
+  controls and R/Q/zoom in Advanced. Native processing and stored Hz retained.
+
+2.9.1: region-relative search with independent axis limits and arrow guides;
+  old processing profiles retired, period display in seconds. Native core unchanged.
+
+2.9.2: renamed to Video Stabilizer. Processing, saved-profile identifiers,
+  icon artwork and optional one-time support are unchanged.
+
+2.9.3: unchanged local WASM bytes are delivered as a packaged content-script
+  data file. Browser startup, retry and seek do not fetch an extension URL.
+  The raw WASM remains included for source verification and Node tests.
