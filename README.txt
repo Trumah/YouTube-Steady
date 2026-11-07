@@ -1,11 +1,22 @@
 Video Stabilizer public distribution
 
-The complete corresponding source is in Video-Stabilizer-2.9.6-source.zip.
+The complete corresponding source is in Video-Stabilizer-2.9.7-source.zip.
 Extract that archive for the extension source, build scripts, translations,
 native reference tests and public validation reports. The GPL license and
 third-party notices are included in both packages.
 
-Video Stabilizer 2.9.6
+Video Stabilizer 2.9.7
+
+2.9.7 localized Chrome Web Store metadata
+  All 12 languages have a Video Stabilizer title with a local purpose,
+  a localized summary, and a complete description of use, settings, privacy,
+  free access, source availability and limitations. Related terms describe
+  camera shake, vibration and steadier video naturally rather than as lists.
+  Processing, the native core, defaults, saved settings and permissions remain
+  unchanged. Existing store copies receive the update after Google approval.
+  Manual copies can update every file in place, reload and refresh YouTube.
+  The public website keeps the verified 2.9.6 store entry until this update
+  is approved. Current publication status is recorded in PROJECT_STATUS.md.
 
 2.9.6 sustained playback reminders (local update)
   After about five effective seconds of sustained trouble, the player icon
