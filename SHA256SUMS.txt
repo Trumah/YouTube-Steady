@@ -1,2 +1,2 @@
-79007c38f3733ee8efb30324b9965c47ddc08cf0ebf2e1c52cfb975c69e6a6c0  Video-Stabilizer-2.9.3.zip
-60f94f018708e74a1d36f7917470e6fe0447094b1d61acf779322bd1dbda1920  Video-Stabilizer-2.9.3-source.zip
+a691d5ccd8c4f2e7b9976e4b4050bb0dc9ff0b67ff0419cc3861f4c2f774b573  Video-Stabilizer-2.9.6.zip
+d4ed97bc6eff5594587a18f58557d83dfa76da8e0cedf7e836837699177be74a  Video-Stabilizer-2.9.6-source.zip

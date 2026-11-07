@@ -1,11 +1,39 @@
 Video Stabilizer public distribution
 
-The complete corresponding source is in Video-Stabilizer-2.9.3-source.zip.
+The complete corresponding source is in Video-Stabilizer-2.9.6-source.zip.
 Extract that archive for the extension source, build scripts, translations,
 native reference tests and public validation reports. The GPL license and
 third-party notices are included in both packages.
 
-Video Stabilizer 2.9.3
+Video Stabilizer 2.9.6
+
+2.9.6 sustained playback reminders (local update)
+  After about five effective seconds of sustained trouble, the player icon
+  gains an amber border and ! symbol, with one four-second notice per incident.
+  Open the panel for measured output/source fps and evidence-based advice:
+  processing pressure, source frame drops, buffering, or an undetermined cause.
+  Processing advice offers Q (sampling size) and lower YouTube resolution.
+  The buttons only locate Q or Performance; values change only by your action.
+  Ten healthy seconds clear the warning. Startup, seeking, pauses, ads and
+  hidden pages are excluded; callback misses recovered by the watchdog do
+  not alone trigger a warning. There is no flashing animation.
+  All 12 languages include localized numbers, accessible status messages
+  and right-to-left layout. Current settings and saved profiles are retained.
+
+2.9.5 independent frame cadence (local update)
+  A native-frame watchdog fills gaps in video callback delivery. Repeated
+  timestamps are closed before analysis, with one job and one timer at most.
+  Pause, seek, hidden pages, errors and disable stop both scheduling paths.
+  Normal canvas compositing presents completed output frames. User settings
+  and the native processing core are preserved. Historical notes follow.
+
+2.9.4 last applied settings (local update)
+  Apply saves confirmed settings for subsequent videos, new tabs, reloads and
+  browser restarts. My default is a separate preset for manual restoration.
+  Enable stays immediate and is remembered. Closing cancels only drafts.
+  Read/save errors remain visible with Retry; failed saves keep active values.
+  First upgrade uses the existing personal default until the first Apply.
+  Older versions did not persist Apply-only values. Historical notes follow.
 
 2.9.3 packaged core loading
   Browser startup compiles unchanged local WASM bytes delivered by Chrome as
@@ -244,7 +272,7 @@ The DePan / FFTW WebAssembly core runs on your device. YouTube still controls
 audio, seeking, speed and fullscreen. No preliminary download or conversion.
 
 Install / share
-  The Video-Stabilizer-2.9.3.zip archive contains the extension itself.
+  The Video-Stabilizer-2.9.5.zip archive contains the extension itself.
   Extract it into one folder. In desktop Chrome, open Extensions > Manage
   extensions, enable Developer mode, choose Load unpacked, and select that
   folder. Keep the folder, including the .wasm file and _locales directory.
@@ -255,7 +283,7 @@ Install / share
 Use
   Open a regular www.youtube.com/watch video and select the camera icon at
   the lower right of the player. Enable or disable stabilization in its panel.
-  Edit the fields and choose Apply or press Enter for this viewing only.
+  Edit the fields and choose Apply or press Enter; later videos use these values.
   Save as my default is enabled after Apply and saves the confirmed settings.
   Closing the panel discards unapplied edits. Restore my default loads the
   one saved profile; it is unavailable until a valid profile has been saved.
@@ -264,7 +292,7 @@ Use
   Both preset buttons require Apply; closing cancels their unapplied values.
   The current schema9/format2 personal profile remains available; old backups are ignored.
   Processing profiles older than2.8 are not loaded.
-  Apply affects this viewing. Save as my default persists for later videos.
+  New videos, tabs and reloads use the last Apply. My default is restored manually.
   Copying the extension to another computer does not copy browser settings.
 
 Recognition
