@@ -12,7 +12,7 @@
   <header><a class="brand" href="index.html"><img src="icon.svg" width="36" height="36" alt="">Video Stabilizer</a><nav aria-label="Languages"><a href="#english">English</a><a href="#chinese" lang="zh-Hant">繁體中文</a></nav></header>
   <main>
     <article id="english" lang="en">
-      <p class="eyebrow">PRIVACY POLICY · UPDATED NOVEMBER 7, 2026</p>
+      <p class="eyebrow">PRIVACY POLICY · UPDATED NOVEMBER 17, 2026</p>
       <h1>Your video stays on your device.</h1>
       <p class="lead">Video Stabilizer reduces camera shake during YouTube playback in desktop Google Chrome. Its stabilization runs locally. The extension does not send video frames, video URLs, viewing history or settings to the developer or to a processing server.</p>
       <h2>What the extension handles</h2>
@@ -22,7 +22,7 @@
         <li><strong>Your preferences:</strong> language, icon visibility and position, last confirmed stabilization settings, and a separately restored personal default are saved in <code>chrome.storage.local</code> on your device. They are not synchronized by the extension or sent to the developer.</li>
       </ul>
       <h2>Permissions and packaged code</h2>
-      <p>The <code>storage</code> permission saves the preferences above. Content-script access is limited to <code>https://www.youtube.com/*</code> so the extension can read the current video and display its controls and stabilized output. All executable JavaScript and WebAssembly used for stabilization are included in the extension package; no remote processing service or remotely hosted executable code is used.</p>
+      <p>The <code>storage</code> permission saves the preferences above. Version 3.0.11 limits content-script access to <code>https://www.youtube.com/*</code> and <code>https://m.youtube.com/*</code>. The extension uses both YouTube hosts to read the current video and display its controls and stabilized output. Earlier store versions use only <code>www.youtube.com</code>. Stabilization and optional WebGPU motion interpolation run on the device using packaged code.</p>
       <h2>Collection, sharing and advertising</h2>
       <p>The developer receives no user data from the extension. It includes no analytics, telemetry, advertising or tracking SDK. It does not sell or share user data, build advertising profiles, or use data for credit or lending decisions. It does not read passwords, authentication cookies, payment details, personal messages or precise location.</p>
       <h2>Your controls and retention</h2>
@@ -30,11 +30,11 @@
       <h2>External services and optional support</h2>
       <p>YouTube playback and Chrome Web Store installation, updates and reviews are provided by Google under Google's policies. This website and the source repository are hosted by GitHub, which may receive ordinary web-request information when you visit. Choosing the optional one-time support link opens PayPal; PayPal handles any information you provide there under its own policies. The extension does not handle payment credentials, create subscriptions, or unlock features in exchange for payment.</p>
       <h2>Questions and changes</h2>
-      <p>This policy describes Video Stabilizer 2.9.3–2.9.6. Future changes to data handling will be reflected here. Contact the developer through <a href="https://github.com/Trumah/YouTube-Steady/issues" rel="noreferrer">the project's issue tracker</a>; issues are public, so do not post passwords, private account information or other sensitive data.</p>
+      <p>This policy covers the Chrome releases through version 3.0.11. Contact the developer through <a href="https://github.com/Trumah/YouTube-Steady/issues" rel="noreferrer">the project's public issue tracker</a>. Keep account details and other sensitive information out of public reports.</p>
       <p class="note">Video Stabilizer is an independent open-source project, not affiliated with YouTube, Google, GitHub or PayPal.</p>
     </article>
     <article id="chinese" lang="zh-Hant">
-      <p class="eyebrow">隱私政策 · 更新日期：2026 年 11 月 7 日</p>
+      <p class="eyebrow">隱私政策 · 更新日期：2026 年 11 月 17 日</p>
       <h1>影片在你的裝置上處理。</h1>
       <p class="lead">Video Stabilizer 在桌面版 Google Chrome 的 YouTube 播放器中減少畫面晃動。防震運算完全在本機進行；擴充功能不會把影片影格、影片網址、觀看紀錄或設定傳送給開發者或處理伺服器。</p>
       <h2>擴充功能會處理的資料</h2>
@@ -44,7 +44,7 @@
         <li><strong>個人偏好：</strong>語言、圖示顯示與位置、最後確認套用的防震設定，以及一組可另行還原的個人預設，會儲存在裝置上的 <code>chrome.storage.local</code>。擴充功能不會將它們同步或傳送給開發者。</li>
       </ul>
       <h2>權限與隨附程式</h2>
-      <p><code>storage</code> 權限用來儲存上述偏好。內容腳本僅能在 <code>https://www.youtube.com/*</code> 執行，以讀取目前影片、顯示操作介面及繪出防震結果。防震所需的 JavaScript 與 WebAssembly 均隨安裝包附上，不使用遠端運算服務或從遠端載入可執行程式碼。</p>
+      <p><code>storage</code> 權限用來儲存上述偏好。3.0.11 的內容腳本僅能在 <code>https://www.youtube.com/*</code> 與 <code>https://m.youtube.com/*</code> 執行，以讀取目前影片、顯示操作介面及繪出防震結果。先前的商店版本只使用 <code>www.youtube.com</code>。防震與選用的 WebGPU 動態補幀都以隨附程式在裝置上運算。</p>
       <h2>蒐集、分享與廣告</h2>
       <p>開發者不會從擴充功能收到使用者資料。擴充功能沒有分析追蹤、遙測、廣告或追蹤用 SDK；不販售或分享使用者資料、不建立廣告輪廓，也不將資料用於信用或貸款判斷。它不會讀取密碼、登入 Cookie、付款資料、私人訊息或精確位置。</p>
       <h2>控制方式與保存期限</h2>
@@ -52,7 +52,7 @@
       <h2>外部服務與自願贊助</h2>
       <p>YouTube 播放及 Chrome Web Store 的安裝、更新與評論由 Google 提供，適用 Google 的政策。網站與原始碼儲存庫由 GitHub 託管，造訪時 GitHub 可能收到一般網頁請求資訊。按下自願單次贊助連結才會開啟 PayPal；你在 PayPal 提供的資料由 PayPal 依其政策處理。擴充功能不處理付款憑證、不建立訂閱，也不以付款解鎖功能。</p>
       <h2>聯絡與政策更新</h2>
-      <p>本政策說明 Video Stabilizer 2.9.3–2.9.6 的行為；日後若變更資料處理方式，會同步更新。可透過<a href="https://github.com/Trumah/YouTube-Steady/issues" rel="noreferrer">專案問題回報頁</a>聯絡開發者；回報內容會公開，請勿張貼密碼、私人帳戶資訊或其他敏感資料。</p>
+      <p>本政策涵蓋截至 3.0.11 的 Chrome 版本。可透過<a href="https://github.com/Trumah/YouTube-Steady/issues" rel="noreferrer">專案的公開問題回報頁</a>聯絡開發者。請將帳戶資訊與其他敏感資料留在公開回報之外。</p>
       <p class="note">Video Stabilizer 是獨立開源專案，與 YouTube、Google、GitHub 或 PayPal 沒有隸屬關係。</p>
     </article>
   </main>

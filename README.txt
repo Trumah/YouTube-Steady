@@ -1,11 +1,76 @@
 Video Stabilizer public distribution
 
-The complete corresponding source is in Video-Stabilizer-2.9.7-source.zip.
+The complete corresponding source is in Video-Stabilizer-3.0.11-source.zip.
 Extract that archive for the extension source, build scripts, translations,
 native reference tests and public validation reports. The GPL license and
 third-party notices are included in both packages.
 
-Video Stabilizer 2.9.7
+Video Stabilizer 3.0.11
+
+3.0.11 system defaults
+  Sampling Q and regional search S now default to 20% on first use and when
+  choosing System defaults. Select Apply to use the staged values.
+
+3.0.10 color alignment in WebGPU motion interpolation
+  Convert decoded YUV frames to RGB before WebGPU samples them. This fixes
+  a colored double edge reproduced with hardware-decoded 1080p video.
+  The same converted frame can be reused across consecutive output slots.
+
+3.0.9 buffered WebGPU motion interpolation
+  Motion interpolation uses up to one output interval of look-ahead, capped
+  at 50 ms. It reuses frames already analyzed for stabilization. When a
+  motion match is unreliable, the affected pixels come from the later
+  stabilized frame. Large mismatches and scene cuts use that entire frame.
+
+3.0.8 optional WebGPU motion interpolation for fixed output
+  In Advanced, select a fixed Output frame rate, then Motion interpolation
+  (WebGPU) and Apply. The GPU uses two already analyzed frames to even out
+  the motion of individual objects at the chosen cadence. The option is off
+  by default. If WebGPU becomes unavailable, fixed-rate stabilization
+  continues. See validation/cross-platform-3.0.8.json for measurements.
+
+3.0.7 attainable playback target in Original mode
+  Original playback warnings use the lower of source fps times playback
+  speed and the measured browser refresh rate. The refresh measurement works
+  with the panel closed. While the display is the limiting factor, playback
+  that meets the target stays healthy even when browser drop counters rise.
+
+3.0.6 output rate limit for the current display
+  Fixed presets and Custom use the lower of source fps times playback speed
+  and the measured browser refresh rate. A browser refreshing at about 60 Hz
+  offers at most 60 fps even when the video can supply more frames. The limit
+  updates with playback speed and display. Saved caps follow the profile.
+
+3.0.5 source frame rate in the output menu
+  Original shows the detected source fps. Fixed rates above what the video
+  can supply at the current playback speed are unavailable in the menu and
+  for new custom values. A saved cap still applies across videos. When the
+  source is slower, the performance readout uses the attainable rate.
+
+3.0.4 camera motion retiming
+  Fixed output reuses the existing translation estimate to shift each selected
+  frame toward its scheduled time. This reduces irregular camera translation
+  steps without increasing analysis frequency. Subject motion still follows
+  the selected source frame. Unreliable motion and discontinuities use the
+  ordinary stabilized frame. Original follows the source timing with
+  stabilization enabled. Display sync appears beside a preset that matches
+  the browser refresh rate. Saved 3.0.3 Display sync settings load as 30 fps.
+
+3.0.3 display sync
+  In Advanced, select Display sync and Apply. The extension chooses an
+  even multiple of the refresh interval, using about half of the available
+  cadence or less. At 60 Hz with a 60 fps video playing at 1.3×, the target
+  is 30 fps. The original video timestamps still determine which frames
+  can be used. Performance shows the chosen target and the measured rates.
+
+3.0.2 fixed stabilized output
+  In Advanced, choose Auto, 15, 30, 60, 120 fps or Custom (1–240 fps), then
+  select Apply. The setting follows the last applied profile and My default.
+  Auto follows the incoming frames and is the default on upgrade.
+  Fixed output selects frames before pixel readback and motion analysis.
+  Performance shows measured analysis and output rates, the selected target
+  and browser refresh rate. A 60 Hz display can show 30 fps every two refreshes.
+  The available video frames, processing speed and display limit actual fps.
 
 2.9.7 localized Chrome Web Store metadata
   All 12 languages have a Video Stabilizer title with a local purpose,
@@ -298,7 +363,7 @@ Use
   Save as my default is enabled after Apply and saves the confirmed settings.
   Closing the panel discards unapplied edits. Restore my default loads the
   one saved profile; it is unavailable until a valid profile has been saved.
-  System defaults fills the form with central only, R85/Q30/regional S30/C15,
+  System defaults fills the form with central only, R85/Q20/regional S20/C15,
   cutoff0.5Hz/damping0.3 and 1.00x, keeping language and icon preferences.
   Both preset buttons require Apply; closing cancels their unapplied values.
   The current schema9/format2 personal profile remains available; old backups are ignored.
@@ -384,8 +449,8 @@ Detection, ratios and resource choice
 Default parameters
   Mode             Central region only; center priority off.
   Central ratio R  85% of source width and height.
-  Sampling ratio Q 30% of each region's source width and height.
-  Search range S   30% of each region's source width/height, each axis capped independently.
+  Sampling ratio Q 20% of each region's source width and height.
+  Search range S   20% of each region's source width/height, each axis capped independently.
   Zoom             1.00 (no enlargement; moving borders may expose black).
   cutoff/damping   0.5 Hz / 0.3; cutoff is common, damping is in Advanced.
   Limit C          15% of source width/height, native soft limits.

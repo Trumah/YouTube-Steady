@@ -1,0 +1,2 @@
+22166a044f4b0208682b4c0453bd76d112504eb5834634a8a8caf70ddbb9778e  Video-Stabilizer-3.0.11.zip
+060eda01391c1ba8af9b2c16960daf32d32290a8477c30b49fb45ec45e2d9c29  Video-Stabilizer-3.0.11-source.zip
